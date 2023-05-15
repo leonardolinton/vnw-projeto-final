@@ -17,6 +17,9 @@ export const Menu = styled.nav`
   background-color: #00000050;
   opacity: 1;
   backdrop-filter: blur(10px);
+  box-shadow: 0px 3px 6px #0000005c;
+  text-align: justify;
+
 `;
 
 export const Logo = styled.div`
@@ -55,6 +58,11 @@ export const Opcoes = styled.div`
       box-shadow: 0px 3px 6px #0000005c;
     }
   }
+
+  @media (max-width: 750px){
+    flex-direction: column;
+    gap: 5px;
+  }
 `;
 
 export const InfoMovie = styled.div`
@@ -63,7 +71,7 @@ export const InfoMovie = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 100px;
+  padding:0 100px;
   position: absolute;
   bottom: 0;
   background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0%
@@ -75,6 +83,17 @@ export const InfoMovie = styled.div`
     font-size: 1rem;
     font-weight: 300;
     line-height: 150%;
+  }
+
+  @media (max-width: 750px){
+    height: 90vh;
+    padding: 5%;
+    justify-content: center;
+    text-align: justify;
+
+    p{
+      max-width: 100%;
+    }
   }
 `;
 
@@ -101,6 +120,14 @@ export const Buttons = styled.div`
     height: 3.125rem;
     border-radius: 25px;
     box-shadow: 0px 3px 6px #0000005c;
+  }
+
+  @media (max-width: 750px){
+    flex-direction: column;
+
+    button{
+      width: 100%;
+    }
   }
 `;
 
