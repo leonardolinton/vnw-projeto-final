@@ -20,7 +20,7 @@ const Carrossel = () => {
   const getFilmes = async () => {
     await axios
       .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=850e4e405a4e2a945faf11cf8ddc1fc3&language=pt-Br&page=2"
+        "https://api.themoviedb.org/3/movie/upcoming?api_key=850e4e405a4e2a945faf11cf8ddc1fc3&language=pt-br&page=1"
       )
       .then((resposta) => {
         const allApi = resposta.data.results.map((item) => {
@@ -38,7 +38,7 @@ const Carrossel = () => {
 
   return (
     <S.CarouselBox>
-      <h2>Filmes</h2>
+    <h2>Últimos lançamentos</h2>
       <Carousel
         breakPoints={breakPoints}
         itemsToScroll={3}
