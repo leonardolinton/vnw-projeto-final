@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const Nav = styled.nav`
   width: 100%;
+  padding: 0 5%;
 `;
 
 export const Generos = styled.ul`

@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const FilmesBox = styled.section`
     display:flex;
     flex-direction: column;
-    padding: 5vh 0;
+    padding: 5vh 5%;
 `
 export const Title = styled.h2`
     font-size: 1.5rem;
