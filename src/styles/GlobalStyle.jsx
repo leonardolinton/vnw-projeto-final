@@ -11,7 +11,24 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Open Sans', sans-serif;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     button{
         cursor: pointer;
     }
-`
+
+    body::-webkit-scrollbar {
+    width: 10px;
+}
+
+    body::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+    body::-webkit-scrollbar-thumb {
+    background-color: #ffffff50;
+    border: solid 2px black;
+}
+`;

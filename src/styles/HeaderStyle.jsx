@@ -19,6 +19,7 @@ export const Menu = styled.nav`
   backdrop-filter: blur(10px);
   box-shadow: 0px 3px 6px #0000005c;
   text-align: justify;
+  z-index: 100;
 
 `;
 
@@ -35,6 +36,7 @@ export const Banner = styled.div`
   height: 100vh;
   width: 100%;
   background-image: url(${banner});
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -126,7 +128,8 @@ export const Buttons = styled.div`
     flex-direction: column;
 
     button{
-      width: 100%;
+      margin: 0 auto;
+      width: 80%;
     }
   }
 `;
