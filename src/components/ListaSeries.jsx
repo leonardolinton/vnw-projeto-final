@@ -12,7 +12,7 @@ const ListaSeries = () => {
       const fetchData = async () => {
         try {
           const apiKey = '850e4e405a4e2a945faf11cf8ddc1fc3';
-          let url = `https://api.themoviedb.org/3/tv/popular`;
+          let url = `https://api.themoviedb.org/3/tv/popular?language=pt-BR`;
           const params = {
             api_key: apiKey,
             page: currentPage,

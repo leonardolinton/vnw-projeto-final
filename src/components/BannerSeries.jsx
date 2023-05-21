@@ -10,7 +10,7 @@ const BannerSeries = () => {
     const fetchSerie = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}`
+          `https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}&language=pt-Br`
         );
         const randomIndex = Math.floor(Math.random() * response.data.results.length);
         const randomSerie = response.data.results[randomIndex];
