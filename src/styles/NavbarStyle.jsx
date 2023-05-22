@@ -15,6 +15,10 @@ export const Nav = styled.nav`
   text-align: justify;
   z-index: 100;
 
+  @media (max-width: 950px){
+      height: 15vh;
+    }
+
 `;
 
 export const Logo = styled.div`
@@ -28,16 +32,23 @@ export const Logo = styled.div`
 
 export const Menu = styled.ul`
     display: flex;
+
+    @media (max-width: 950px){
+      flex-direction: column;
+    }
+
+    @media (max-width: 950px){
+      gap: 1rem;
+    }
 `
 
 export const Link = styled.li`
-    padding: 10px 35px;
+    padding: 10px;
     border-radius: 50px;
     background-color: transparent;
     font-size: 0.875rem;
     color: #fff;
     transition: ease-in-out 0.3s;
-
 `
 
 export const Opcoes = styled.div`
@@ -52,5 +63,9 @@ export const Opcoes = styled.div`
         &:hover{
             opacity: 0.7;
         }
+    }
+
+    @media (max-width: 950px){
+      display: none;
     }
 `

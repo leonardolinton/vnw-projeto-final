@@ -30,5 +30,6 @@ export const GlobalStyle = createGlobalStyle`
     body::-webkit-scrollbar-thumb {
     background-color: #ffffff50;
     border: solid 2px black;
+    border-radius: 5px;
 }
 `;

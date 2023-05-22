@@ -11,8 +11,8 @@ const ListaSeries = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const apiKey = '850e4e405a4e2a945faf11cf8ddc1fc3';
-          let url = `https://api.themoviedb.org/3/tv/popular?language=pt-BR`;
+          const apiKey = import.meta.env.VITE_API_KEY;
+          let url = `https://api.themoviedb.org/3/tv/top_rated?language=pt-BR`;
           const params = {
             api_key: apiKey,
             page: currentPage,
@@ -60,7 +60,7 @@ const ListaSeries = () => {
   
         {series.map((serie) => (
           <div key={serie.id}>
-            <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} alt={serie.name} />
+            <img src={`https://image.tmdb.org/t/p/w300${serie.poster_path}`} alt={serie.name} />
             <h3>{serie.name}</h3>
           </div>
         ))}

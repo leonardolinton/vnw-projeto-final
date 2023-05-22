@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Banner = styled.div`
   height: 100vh;
   width: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,17 +24,21 @@ export const InfoMovie = styled.div`
     0% no-repeat padding-box;
   opacity: 1;
 
-  @media (max-width: 750px) {
-    height: 90vh;
-    padding: 5%;
-    justify-content: center;
-    text-align: justify;
+  @media (max-width: 950px) {
+    height: 70vh;
+    width: 100%;
+    align-items: center;
+    padding: 0 5%;
   }
 `;
 
 export const Titulo = styled.h1`
   font-size: 3rem;
   text-shadow: #00000029 0px 3px 6px, #0000003b 0px 3px 6px;
+
+  @media (max-width: 950px) {
+    text-align: center;
+  }
 `;
 
 export const Nota = styled.div`
@@ -42,7 +46,7 @@ export const Nota = styled.div`
   align-items: center;
   gap: 15px;
 
-  div{
+  div {
     display: flex;
     align-items: flex-end;
   }
@@ -59,14 +63,33 @@ export const Nota = styled.div`
 `;
 
 export const Sinopse = styled.p`
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 150%;
-    max-width: 50%;
-    max-height: 10rem;
-    overflow-y: hidden;
-    text-shadow: #00000029 0px 3px 6px, #0000003b 0px 3px 6px;
-`
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 150%;
+  max-width: 50%;
+  max-height: 10rem;
+  padding: 0.5rem;
+  overflow-y: scroll;
+  text-shadow: #00000029 0px 3px 6px, #0000003b 0px 3px 6px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffffff50;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 950px) {
+    max-width: 100%;
+    text-align: justify;
+  }
+`;
 
 export const Buttons = styled.div`
   display: flex;
@@ -80,6 +103,14 @@ export const Buttons = styled.div`
     box-shadow: 0px 3px 6px #0000005c;
   }
 
+  @media (max-width: 950px) {
+    flex-direction: column;
+    gap: 1rem;
+
+    button{
+      width: 70vw;
+    }
+  }
 `;
 
 export const ButtonPlay = styled.button`
@@ -99,6 +130,8 @@ export const ButtonPlay = styled.button`
     color: #fff;
     height: 100%;
   }
+
+  
 `;
 
 export const ButtonTrailer = styled.button`

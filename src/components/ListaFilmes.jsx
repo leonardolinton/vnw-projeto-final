@@ -11,7 +11,7 @@ const ListaFilmes = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const apiKey = '850e4e405a4e2a945faf11cf8ddc1fc3';
+          const apiKey = import.meta.env.VITE_API_KEY;
           let url = `https://api.themoviedb.org/3/movie/popular?language=pt-BR`;
           const params = {
             api_key: apiKey,
@@ -60,7 +60,7 @@ const ListaFilmes = () => {
   
         {filmes.map((filme) => (
           <div key={filme.id}>
-            <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.title} />
+            <img src={`https://image.tmdb.org/t/p/w300${filme.poster_path}`} alt={filme.title} />
             <h3>{filme.title}</h3>
           </div>
         ))}

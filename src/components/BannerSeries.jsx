@@ -7,7 +7,7 @@ import logoIMDB from "../assets/IMDB_logo.png";
 import filmRoll from "../assets/film_roll_icon.png";
 import play from "../assets/play_icon.png";
 
-const API_KEY = '850e4e405a4e2a945faf11cf8ddc1fc3';
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const BannerSeries = () => {
   const [serie, setSerie] = useState(null);
@@ -67,7 +67,6 @@ const BannerSeries = () => {
         </S.ButtonTrailer>
       </S.Buttons>
       </S.InfoMovie>
-      
     </S.Banner>
   );
 };
