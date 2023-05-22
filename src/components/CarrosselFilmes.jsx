@@ -23,7 +23,7 @@ const CarrosselFilmes = () => {
   const getFilmes = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=pt-br&page=1`
+        `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=pt-Br&page=1`
       )
       .then((resposta) => {
         const allApi = resposta.data.results.map((item) => {
@@ -52,10 +52,12 @@ const CarrosselFilmes = () => {
         itemPadding={[20, 10]}
         itemPosition={consts.END}
       >
-        {filmes.map((item) => (
+        {filmes.map((filme) => (
           <figure>
-            <img src={item.image} style={{ width: "100%", height: "auto"}} />
-            <h3>{item.title}</h3>
+            <img src={filme.image} style={{ width: "100%", height: "auto"}} />
+            <h3>{filme.title}</h3>
+            <span>{filme.release_date.substring(0, 4)}</span>
+            <p>{filme.overview}</p>
           </figure>
         ))}
       </Carousel>

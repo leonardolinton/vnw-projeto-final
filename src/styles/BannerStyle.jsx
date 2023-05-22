@@ -73,7 +73,7 @@ export const Sinopse = styled.p`
   text-shadow: #00000029 0px 3px 6px, #0000003b 0px 3px 6px;
 
   &::-webkit-scrollbar {
-    width: 5px;
+    width: 3px;
   }
 
   &::-webkit-scrollbar-track {
@@ -82,7 +82,7 @@ export const Sinopse = styled.p`
 
   &::-webkit-scrollbar-thumb {
     background-color: #ffffff50;
-    border-radius: 5px;
+    border-radius: 3px;
   }
 
   @media (max-width: 950px) {

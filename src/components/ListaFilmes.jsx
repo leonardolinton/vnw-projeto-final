@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import * as S from "../styles/ListaStyle";
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 
@@ -48,40 +49,47 @@ const ListaFilmes = () => {
     };
   
     return (
-      <div>
-        <form onSubmit={handleSearchSubmit}>
-          <input
-            type="text"
-            placeholder="Pesquisar filme por nome"
-            value={searchQuery}
-            onChange={handleSearchChange}
+      <S.Container>
+        <S.Cabecalho>
+          <S.Titulo>Em Alta</S.Titulo>
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Pesquisar filme"
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </form>
+        </S.Cabecalho>
+        
+        <S.BoxLista>
+          {filmes.map((filme) => (
+            <figure key={filme.id}>
+              <img src={`https://image.tmdb.org/t/p/w300${filme.poster_path}`} alt={filme.title} />
+              <h3>{filme.title}</h3>
+              <span>{filme.release_date.substring(0, 4)}</span>
+              <p>{filme.overview}</p>
+            </figure>
+          ))}
+        </S.BoxLista>
+  
+          <ReactPaginate className='pagination'
+            pageCount={totalPages}
+            pageRangeDisplayed={2}
+            marginPagesDisplayed={1}
+            onPageChange={handlePageChange}
+            containerClassName="pagination"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            previousClassName="page-item"
+            nextClassName="page-item"
+            previousLinkClassName="page-link"
+            nextLinkClassName="page-link"
+            activeClassName="active"
+            previousLabel="Anterior"
+            nextLabel="Próxima"
           />
-        </form>
-  
-        {filmes.map((filme) => (
-          <div key={filme.id}>
-            <img src={`https://image.tmdb.org/t/p/w300${filme.poster_path}`} alt={filme.title} />
-            <h3>{filme.title}</h3>
-          </div>
-        ))}
-  
-        <ReactPaginate
-          pageCount={totalPages}
-          pageRangeDisplayed={3}
-          marginPagesDisplayed={1}
-          onPageChange={handlePageChange}
-          containerClassName="pagination"
-          pageClassName="page-item"
-          pageLinkClassName="page-link"
-          previousClassName="page-item"
-          nextClassName="page-item"
-          previousLinkClassName="page-link"
-          nextLinkClassName="page-link"
-          activeClassName="active"
-          previousLabel="Anterior"
-          nextLabel="Próxima"
-        />
-      </div>
+      </S.Container>
     );
   };
   
