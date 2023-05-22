@@ -78,7 +78,7 @@ const ListaSeries = () => {
 
       <ReactPaginate
         pageCount={totalPages}
-        pageRangeDisplayed={3}
+        pageRangeDisplayed={2}
         marginPagesDisplayed={1}
         onPageChange={handlePageChange}
         containerClassName="pagination"
