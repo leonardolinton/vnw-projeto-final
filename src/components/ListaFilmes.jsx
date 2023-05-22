@@ -55,7 +55,7 @@ const ListaFilmes = () => {
           <form onSubmit={handleSearchSubmit}>
             <input
               type="text"
-              placeholder="Pesquisar filme"
+              placeholder="Pesquisar..."
               value={searchQuery}
               onChange={handleSearchChange}
             />

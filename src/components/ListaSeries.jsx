@@ -55,7 +55,7 @@ const ListaSeries = () => {
         <form onSubmit={handleSearchSubmit}>
           <input
             type="text"
-            placeholder="Pesquisar serie por nome"
+            placeholder="Pesquisar..."
             value={searchQuery}
             onChange={handleSearchChange}
           />
