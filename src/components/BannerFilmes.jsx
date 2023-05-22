@@ -48,11 +48,26 @@ const BannerFilmes = () => {
         <S.Nota>
           <img src={star} alt="icone de estrela" />
           <div>
-          <p>{filme.vote_average}</p><span>/10</span>
+            <p>{filme.vote_average}</p>
+            <span>/10</span>
           </div>
           <img src={logoIMDB} alt="" width={40} height={20} />
         </S.Nota>
         <S.Sinopse>{filme.overview}</S.Sinopse>
+        <S.Buttons>
+        <S.ButtonPlay>
+          <a href="">
+            <img src={play} alt="" width={15} height={15} />
+            Assistir agora
+          </a>
+        </S.ButtonPlay>
+        <S.ButtonTrailer>
+          <a href="">
+            <img src={filmRoll} alt="" width={15} height={15} />
+            Trailer
+          </a>
+        </S.ButtonTrailer>
+      </S.Buttons>
       </S.InfoMovie>
     </S.Banner>
   );
