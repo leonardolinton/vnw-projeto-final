@@ -2,11 +2,12 @@ import { styled } from "styled-components";
 
 export const Container = styled.main`
   width: 100%;
-  padding: 0 5%;
+  padding: 5vh 5%;
   background-color: #000;
   color: #fff;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   .pagination {
     display: flex;
@@ -70,6 +71,7 @@ export const Cabecalho = styled.div`
       color: #fff;
       border: solid 1px #fff;
       transition: ease-in-out 0.3s;
+      border-radius: 25px;
 
       &::placeholder {
         color: #717171;
@@ -80,25 +82,6 @@ export const Cabecalho = styled.div`
         height: 2rem;
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
-      }
-    }
-
-    button{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-left: 1px solid #fff;
-      border-top: 1px solid #fff;
-      border-bottom: 1px solid #fff;
-      background-color: transparent;
-      
-      img{
-        width: 100%;
-        height: 100%;
-      }
-
-      @media (max-width: 800px) {
-        visibility: hidden;
       }
     }
 

@@ -15,7 +15,7 @@ export const Generos = styled.ul`
   background-color: #000;
 
   &::-webkit-scrollbar{
-    height: 8px;
+    height: 3px;
   }
   &::-webkit-scrollbar-track{
     background-color: #000;
@@ -25,7 +25,7 @@ export const Generos = styled.ul`
   }
   &::-webkit-scrollbar-thumb{
     background-color: #ffffff50;
-    border: solid 2px black;
+    border-radius: 3px;
   }
 
   li {
