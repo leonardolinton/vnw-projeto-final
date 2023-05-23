@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import * as S from "../styles/ListaStyle";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
+/*===== Importação das imagens usadas ======*/
+import LupaIcon from '../assets/lupa.svg'
 
 const ListaSeries = () => {
   const [series, setSeries] = useState([]);
@@ -53,6 +55,7 @@ const ListaSeries = () => {
       <S.Cabecalho>
         <S.Titulo>Em Alta</S.Titulo>
         <form onSubmit={handleSearchSubmit}>
+          <button type='submit'><img src={LupaIcon} alt="Icone de Lupa" /></button>
           <input
             type="text"
             placeholder="Pesquisar..."
@@ -89,8 +92,8 @@ const ListaSeries = () => {
         previousLinkClassName="page-link"
         nextLinkClassName="page-link"
         activeClassName="active"
-        previousLabel="Anterior"
-        nextLabel="Próxima"
+        previousLabel="<"
+        nextLabel=">"
       />
     </S.Container>
   );

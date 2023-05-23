@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Banner = styled.div`
+  position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -12,6 +13,7 @@ export const Banner = styled.div`
 `;
 
 export const InfoMovie = styled.div`
+  position: relative;
   width: 100%;
   height: 50vh;
   display: flex;

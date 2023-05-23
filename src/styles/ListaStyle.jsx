@@ -15,6 +15,9 @@ export const Container = styled.main`
     margin: 10vh 0;
 
     a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1rem;
       background: transparent;
       color: #fff;
@@ -26,7 +29,7 @@ export const Container = styled.main`
 
       @media (max-width: 950px) {
         font-size: 0.7rem;
-        padding: 0.4rem 0.6rem;
+        padding: 0.3rem 0.5rem;
       }
 
       &:hover,
@@ -42,9 +45,10 @@ export const Container = styled.main`
 `;
 
 export const Titulo = styled.h2`
+  display: flex;
+  align-items: flex-end;
   color: #fff;
   margin-left: 1rem;
-  padding-top: 5vh;
 `;
 
 export const Cabecalho = styled.div`
@@ -53,16 +57,17 @@ export const Cabecalho = styled.div`
   justify-content: space-between;
 
   form {
+    display: flex;
+
     input {
       width: 15rem;
       padding: 1rem;
       margin-right: 1rem;
       height: 3rem;
       outline: none;
-      border-radius: 25px;
       font-size: 1rem;
       background-color: transparent;
-      color:#717171;
+      color: #fff;
       border: solid 1px #fff;
       transition: ease-in-out 0.3s;
 
@@ -78,8 +83,27 @@ export const Cabecalho = styled.div`
       }
     }
 
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid #fff;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      background-color: transparent;
+      
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 800px) {
+        visibility: hidden;
+      }
+    }
+
     @media (max-width: 800px) {
-        width: 50%;
+      width: 50%;
     }
   }
 `;
@@ -96,11 +120,11 @@ export const BoxLista = styled.div`
     margin: 1rem;
     transition: ease-in-out 0.3s;
 
-    &:hover{
-        filter: grayscale(0.9);
+    &:hover {
+      filter: grayscale(0.9);
     }
 
-    &:hover p{
+    &:hover p {
       color: #fff;
     }
 
@@ -116,10 +140,9 @@ export const BoxLista = styled.div`
     span {
       font-size: 0.7rem;
       margin-top: 1rem;
-      
     }
 
-    p{
+    p {
       font-size: 0.8rem;
       text-align: justify;
       position: absolute;
@@ -128,7 +151,6 @@ export const BoxLista = styled.div`
       color: transparent;
       transition: ease-in-out 0.3s;
     }
-
   }
 
   @media (max-width: 1200px) {
