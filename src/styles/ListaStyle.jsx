@@ -94,17 +94,30 @@ export const Cabecalho = styled.div`
 export const BoxLista = styled.div`
   width: 100%;
   display: grid;
-  gap: 3rem 1rem;
+  gap: 0.5rem 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;
 
-  figure {
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+export const Card = styled.figure`
     position: relative;
     margin: 1rem;
     transition: ease-in-out 0.3s;
 
     &:hover {
-      filter: grayscale(0.9);
+      filter: grayscale(1);
     }
 
     &:hover p {
@@ -112,7 +125,6 @@ export const BoxLista = styled.div`
     }
 
     img {
-      height: 100%;
       width: 100%;
     }
 
@@ -126,29 +138,20 @@ export const BoxLista = styled.div`
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       text-align: justify;
       position: absolute;
       top: 0;
-      margin: 1rem;
+      margin: 0.5rem;
       color: transparent;
       transition: ease-in-out 0.3s;
+
+      @media (max-width: 1000px) {
+        font-size: 0.5rem;
+      }
     }
-  }
 
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (max-width: 500px) {
-    grid-template-columns: 1fr;
-  }
-`;
+    @media (max-width: 800px) {
+      margin: 0.5rem;
+    }
+` 

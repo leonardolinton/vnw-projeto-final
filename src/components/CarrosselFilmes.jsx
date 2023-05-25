@@ -8,10 +8,9 @@ const CarrosselFilmes = () => {
   const API_KEY = import.meta.env.VITE_API_KEY;
 
   const breakPoints = [
-    {width: 1, itemsToShow: 1, showArrows: false},
     {width: 400, itemsToShow: 2, showArrows: false},
-    {width: 500, itemsToShow: 3, showArrows: false},
-    {width: 700, itemsToShow: 5},
+    {width: 600, itemsToShow: 3, showArrows: false},
+    {width: 800, itemsToShow: 5},
   ];
 
   const [filmes, setFilmes] = useState([]);

@@ -64,7 +64,7 @@ const ListaSeries = () => {
 
       <S.BoxLista>
         {series.map((serie) => (
-          <figure key={serie.id}>
+          <S.Card key={serie.id}>
             <img
               src={`https://image.tmdb.org/t/p/w300${serie.poster_path}`}
               alt={serie.name}
@@ -72,7 +72,7 @@ const ListaSeries = () => {
             <h3>{serie.name}</h3>
             <span>{serie.first_air_date.substring(0, 4)}</span>
             <p>{serie.overview}</p>
-          </figure>
+          </S.Card>
         ))}
       </S.BoxLista>
 
