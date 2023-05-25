@@ -24,7 +24,7 @@ export const CarouselBox = styled.section`
     text-align: justify;
     position: absolute;
     top: 0;
-    margin: 1rem;
+    margin: 0.5rem;
     color: transparent;
     transition: ease-in-out 0.3s;
   }
@@ -44,6 +44,11 @@ export const CarouselBox = styled.section`
     img {
       height: 100%;
       width: 100%;
+    }
+    p{
+      @media (max-width: 1000px) {
+        font-size: 0.5rem;
+      }
     }
   }
 
